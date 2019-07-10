@@ -10,7 +10,7 @@ class PoJie():
         self.ssid = ssid
         self.file=open(fpath,"r",errors="ignore")
         wifi = pywifi.PyWiFi() #抓取网卡接口
-        self.iface = wifi.interfaces()[0]#抓取第一个无限网卡
+        self.iface = wifi.interfaces()[1]#抓取第一个无限网卡
         self.iface.disconnect() #测试链接断开所有链接
         time.sleep(1) #休眠1秒
         #测试网卡是否属于断开状态，
